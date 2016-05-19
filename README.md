@@ -15,7 +15,7 @@ There are a lot of developers who love Spark and want to have custom APIs for Sp
   ```scala
   import com.company.spark.custom._
   
-  sc.parallelize(Seq(1, 2, 3))
+  val rdd = sc.parallelize(Seq(1, 2, 3))
   rdd.customPipe("cat").collect()
   ```
 
