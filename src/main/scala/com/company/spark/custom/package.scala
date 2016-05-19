@@ -40,7 +40,7 @@ package object custom {
   /**
    * Adds a method, `customCount`, to [[DataFrame]].
    */
-  implicit class CustomDataFrame[T](df: DataFrame) {
+  implicit class CustomDataFrame(df: DataFrame) {
     /**
      * Returns the number of rows in the [[DataFrame]].
      */
@@ -52,7 +52,7 @@ package object custom {
   /**
    * Adds a method, `customTextFile`, to [[SparkContext]].
    */
-  implicit class CustomSparkContext[T](sparkContext: SparkContext) {
+  implicit class CustomSparkContext(sparkContext: SparkContext) {
     /**
      * Read a text file from HDFS, a local file system (available on all nodes), or any
      * Hadoop-supported file system URI, and return it as an RDD of Strings.
@@ -67,7 +67,7 @@ package object custom {
   /**
    * Adds a method, `customLoadJsonRDD`, to [[SQLContext]].
    */
-  implicit class CustomSQLContext[T](sqlContext: SQLContext) {
+  implicit class CustomSQLContext(sqlContext: SQLContext) {
     /**
      * Return an a [[DataFrame]] from [[RDD]] consist of json data.
      *
