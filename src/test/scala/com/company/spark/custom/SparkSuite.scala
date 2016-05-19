@@ -64,7 +64,8 @@ class SparkSuite extends FunSuite with BeforeAndAfterAll {
     import testImplicits._
 
     val df = (0 to 1).map(i => (i, i.toString)).toDF()
-    assert(df.customCount() == 2)
+    val actual = df.customCount()
+    assert(actual == 2)
   }
 
   test("Simple customTextFile() test") {
